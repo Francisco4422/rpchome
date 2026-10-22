@@ -1,5 +1,8 @@
 # RPCHome
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Francisco4422/rpchome/badge)](https://scorecard.dev/viewer/?uri=github.com/Francisco4422/rpchome)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
+
 Control your smart home locally. No cloud, no accounts, no servers.
 
 RPCHome is a free and open-source mobile app for Android and iOS that discovers,
