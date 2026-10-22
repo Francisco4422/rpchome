@@ -1,0 +1,40 @@
+name: Device support request
+description: Ask for a Shelly model that does not work or is not fully supported.
+labels: ["type: device request", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open these two addresses in a browser on the same network as the device and paste the results below.
+        Remove passwords, Wi-Fi names and anything you do not want to share.
+
+        - `http://<device-ip>/rpc/Shelly.GetDeviceInfo`
+        - `http://<device-ip>/rpc/Shelly.GetComponents`
+  - type: input
+    id: model
+    attributes:
+      label: Device name
+      placeholder: "Shelly Plus 2PM"
+    validations:
+      required: true
+  - type: textarea
+    id: device-info
+    attributes:
+      label: Output of Shelly.GetDeviceInfo
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: components
+    attributes:
+      label: Output of Shelly.GetComponents
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: what-fails
+    attributes:
+      label: What does not work?
+      description: For example, the device is not discovered, a component is missing, or a control does nothing.
+    validations:
+      required: true

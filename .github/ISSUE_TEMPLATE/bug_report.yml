@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work as expected.
+labels: ["type: bug", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please remove passwords, Wi-Fi names and IP addresses you do not want to share.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See error ...
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: RPCHome version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and OS version
+      placeholder: "Pixel 8, Android 16"
+  - type: input
+    id: device
+    attributes:
+      label: Device model and firmware
+      description: Shown in the device settings, or in Shelly.GetDeviceInfo.
+      placeholder: "Shelly 1PM Gen3, firmware 1.6.2"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error messages
+      render: text

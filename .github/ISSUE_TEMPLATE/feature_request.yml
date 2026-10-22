@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest an idea or improvement.
+labels: ["type: feature", "status: triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation, not the solution yet.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: checkboxes
+    id: local
+    attributes:
+      label: Scope
+      options:
+        - label: This works without any cloud service or account.
+          required: true
